@@ -59,12 +59,9 @@ function App() {
     
     return (
         <>
-            <div className="App">
-                <SelectComponent/>
-            </div>
-            <div className="App">
-                <DayPicker />
-            </div>
+            {/* Weather */}
+            <DisplayWeatherContainer/>
+            {/* Responsive table */}
             <div className="App">
                 <Table tableData={tableData}/>
             </div>
@@ -81,15 +78,18 @@ function App() {
                         <p>Card one</p>
                     </Card>
                 </Board>
-
                 <Board id="board-2" className="board">
                     <Card id="card-2" className="card" isDraggable="true">
                         <p>Card two</p>
                     </Card>
                 </Board>
             </main>
-            {/* Weather */}
-            <DisplayWeatherContainer/>
+            <div className="App">
+                <SelectComponent/>
+            </div>
+            <div className="App">
+                <DayPicker />
+            </div>
         </>
     );
 }

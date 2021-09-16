@@ -5,7 +5,7 @@ export const CityCard = ({ city, removeCity }) => {
 
     return (
         <>  
-            <div className={`weather__image--wrapper ${city.weather[0].id === 801 ? 'few-clouds' : ''}`}>
+            <div className={`weather__image--wrapper ${city.weather[0].id === 801 ? 'few-clouds' : ''} ${city.weather[0].id === 802 ? 'few-clouds' : ''}`}>
                 <i className="weather__icon--more" onClick={() => setIsOpen(!isOpen)}></i>
                 {isOpen && 
                     <div className="weather__options-container">
@@ -19,6 +19,7 @@ export const CityCard = ({ city, removeCity }) => {
             </div>
             <div className="weather__card--inner">
                 <h3 className="weather__name">{city.name}</h3>
+                {/* TODO Add day, date and time for each city */}
                 <div className="weather__date--wrapper">
                     <span>Day</span>&#124;
                     <span>datum</span>&#124;
