@@ -1,0 +1,22 @@
+.day-picker__wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.DayPicker-Day--selected {
+    background-color: rgb(255, 193, 7) !important;
+    color: white !important;
+}
+
+.DayPicker-Day--today {
+    color: rgb(255, 193, 7);
+}
+
+.day-picker__selected-day {
+    font-weight: 500;
+    font-size: 1.15em;
+    padding-top: 2em;
+}

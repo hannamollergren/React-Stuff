@@ -1,0 +1,48 @@
+.modal__container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.modal__container h1, label {
+    text-align: left;
+    display: block;
+}
+
+.modal {
+    position: relative;
+    background: #fff;
+    width: 50vw;
+    overflow-y: auto;
+    margin: auto;
+    padding: 4.0625rem 1.25rem;
+    text-align: center;
+}
+
+@media only screen and (max-width: 900px) { 
+    .modal {
+        width: 90vw;
+    }
+}
+
+input, select {
+    width: 100%;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+}
+
+select {
+    margin: 8px 0 0 0;
+}
+
+.modal__icon {
+    position: absolute;
+    right: 0;
+    padding: 1.25rem;
+    top: 0;
+    cursor: pointer;
+}

@@ -1,0 +1,246 @@
+
+.weather__container {
+    color: #48484A;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-color: #F4F3EF;    
+    padding: 2em 2em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.weather__container h2 {
+    padding: 24px 0 40px 0;
+}
+
+.weather__wrapper {
+    max-width: 400px;
+    margin: 0 auto;
+}
+  
+.weather__card-wrapper, .weather__input-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.weather__card {
+    display: block;
+    background-color: white;
+    text-align: center;
+    border-radius: 1em;
+    -webkit-box-shadow: 7px 9px 15px -5px rgba(0,0,0,0.15);
+    -moz-box-shadow: 7px 9px 15px -5px rgba(0,0,0,0.15);
+    box-shadow: 7px 9px 15px -5px rgba(0,0,0,0.15);
+    height: 415px;
+    margin-bottom: 24px;
+}
+
+.weather__card > * {
+    color: #796F6E
+}
+
+.weather__card .weather__card--inner .weather__icon--degrees circle {
+    stroke: #796F6E;
+}
+
+.weather__card--inner {
+    padding: 0 12px 12px 12px;
+}
+
+.weather__card:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Cloudy */
+.weather__card.clouds .weather__image--wrapper {
+    background-color: #f8fafe;
+}
+
+.weather__card.clouds .weather__image--wrapper.few-clouds {
+    background-color: #f1fbff;
+}
+
+.weather__card.clouds > * {
+    color: #3a5e85;
+}
+
+.weather__card.clouds .weather__card--inner .weather__icon--degrees circle {
+    stroke: #3a5e85;
+}
+
+/* Clear */
+.weather__card.clear .weather__image--wrapper {
+    background-color: lightyellow;
+}
+
+.weather__card.clear > * {
+    color: #EC6E4C;
+}
+
+.weather__card.clear .weather__card--inner .weather__icon--degrees circle {
+    stroke: #EC6E4C;
+}
+
+/* Clear Night */
+
+.weather__card.clear.night .weather__image--wrapper {
+    background-color: rgb(229, 229, 247);
+}
+
+.weather__card.clear.night > * {
+    color: #7174b2;
+}
+
+.weather__card.clear.night .weather__card--inner .weather__icon--degrees circle {
+    stroke: #7174b2;
+}
+
+/* Rain */
+.weather__card.rain .weather__image--wrapper {
+    background-color: #eeede8;
+}
+
+/* Snow */
+
+/* Thunderstorm */
+
+/* Drizzle */
+
+/* Atmosphere */
+
+.weather__name {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding-bottom: 8px;
+}
+
+.weather__date--wrapper {
+    color: rgb(175, 175, 175);
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.weather__date--wrapper span {
+    padding: 0 8px;
+}
+
+.weather__image--wrapper {
+    height: 60%;
+    background-color: #f8f8f7;
+    position: relative;
+}
+
+.weather__image--wrapper img {
+    position: relative;
+    top: 50px;
+}
+
+.weather__image--wrapper svg {
+    bottom: 0;
+    position: absolute;
+    left: 0;
+}
+
+.weather__search-bar {
+    width: 100%;
+    margin: 0 auto 0;
+    border: 1px solid lightgrey;
+}
+
+.weather__temp {
+    font-size: 3em;
+    font-weight: bold;
+    position: relative;
+    bottom: -25px
+}
+
+.weather__temp-container {
+    position: relative;
+}
+
+.message {
+    padding: 6px 0 0;
+}
+
+.weather__icon--more {
+    position: absolute;
+    padding: 16px;  
+    cursor: pointer;
+    top: 0;
+    right: 0;
+}
+
+.weather__icon--more::before {
+    content: url('../images/more.svg');
+}
+
+.weather__icon--remove::before {
+    position: relative;
+    top: 2px;
+    margin-right: 8px;
+    content: url('../images/delete.png');
+}
+
+.weather__icon--degrees {
+    position: relative;
+    top: -35px;
+    right: -40px;
+}
+
+.weather__options-container {
+    background: white;
+    padding: 16px;
+    width: 200px;
+    position: absolute;
+    top: 43px;
+    right: 24px;
+    box-shadow: 7px 9px 15px -5px rgb(0 0 0 / 5%);
+}
+
+.weather__options-container span {
+    cursor: pointer;
+    color: black;
+}
+
+@media only screen and (min-width: 900px) {
+    .weather__container {
+        padding: 2em 6em;
+    }
+
+    .weather__wrapper {
+        max-width: none;
+        margin: 0;
+    }
+
+    .weather__card-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1em;
+    }
+
+    .weather__input-wrapper {
+       grid-template-columns: 2fr 1fr;
+    }
+
+    .weather__card--inner {
+        padding: 0 24px 24px 24px;
+    }
+
+    .weather__options-container {
+        width: 60%;
+    }    
+}
+
+@media only screen and (min-width: 1441px) { 
+    .weather__wrapper {
+        max-width: none;
+        margin: 0;
+    }
+
+    .weather__card-wrapper, .weather__input-wrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .weather__options-container {
+        width: 40%;
+    }    
+}
